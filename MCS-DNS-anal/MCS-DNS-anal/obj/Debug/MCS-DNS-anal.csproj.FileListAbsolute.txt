@@ -1,0 +1,7 @@
+C:\Users\meszaroscsaba\Documents\GitHub\Console ism\MCS-DNS-anal\MCS-DNS-anal\bin\Debug\MCS-DNS-anal.exe.config
+C:\Users\meszaroscsaba\Documents\GitHub\Console ism\MCS-DNS-anal\MCS-DNS-anal\bin\Debug\MCS-DNS-anal.exe
+C:\Users\meszaroscsaba\Documents\GitHub\Console ism\MCS-DNS-anal\MCS-DNS-anal\bin\Debug\MCS-DNS-anal.pdb
+C:\Users\meszaroscsaba\Documents\GitHub\Console ism\MCS-DNS-anal\MCS-DNS-anal\obj\Debug\MCS-DNS-anal.csproj.AssemblyReference.cache
+C:\Users\meszaroscsaba\Documents\GitHub\Console ism\MCS-DNS-anal\MCS-DNS-anal\obj\Debug\MCS-DNS-anal.csproj.CoreCompileInputs.cache
+C:\Users\meszaroscsaba\Documents\GitHub\Console ism\MCS-DNS-anal\MCS-DNS-anal\obj\Debug\MCS-DNS-anal.exe
+C:\Users\meszaroscsaba\Documents\GitHub\Console ism\MCS-DNS-anal\MCS-DNS-anal\obj\Debug\MCS-DNS-anal.pdb

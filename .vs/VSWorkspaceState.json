@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MCS-DNS-anal",
+    "\\MCS-DNS-anal\\MCS-DNS-anal"
   ],
+  "SelectedNode": "\\MCS-DNS-anal\\MCS-DNS-anal\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
