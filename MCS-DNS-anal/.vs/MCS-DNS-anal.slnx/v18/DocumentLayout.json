@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\meszaroscsaba\\Documents\\GitHub\\Console ism\\MCS-DNS-anal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{50C06A1D-9145-4224-A643-90D460F45F72}|MCS-DNS-anal\\MCS-DNS-anal.csproj|c:\\users\\meszaroscsaba\\documents\\github\\console ism\\mcs-dns-anal\\mcs-dns-anal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C06A1D-9145-4224-A643-90D460F45F72}|MCS-DNS-anal\\MCS-DNS-anal.csproj|solutionrelative:mcs-dns-anal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\meszaroscsaba\\Documents\\GitHub\\Console ism\\MCS-DNS-anal\\MCS-DNS-anal\\Program.cs",
+              "RelativeDocumentMoniker": "MCS-DNS-anal\\Program.cs",
+              "ToolTip": "C:\\Users\\meszaroscsaba\\Documents\\GitHub\\Console ism\\MCS-DNS-anal\\MCS-DNS-anal\\Program.cs",
+              "RelativeToolTip": "MCS-DNS-anal\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T12:47:57.818Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
