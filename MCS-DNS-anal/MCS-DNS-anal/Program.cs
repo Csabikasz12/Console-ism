@@ -27,10 +27,10 @@ namespace MCS_DNS_anal
             szazalek = teljesMeret > 0 ? (double)darabszam / teljesMeret * 100 : 0.0;
         }
 
-        public void kiiratas(CultureInfo hu)
+        public void kiiratas(CultureInfo hu, int nevSzelesseg)
         {
-            Console.Write($"{nev,-8}");
-            Console.WriteLine($"{darabszam.ToString("N0", hu),10} darab, {szazalek.ToString("F2", hu),6}%");
+            Console.Write($"\t{nev.PadRight(nevSzelesseg)}");
+            Console.WriteLine($"{darabszam.ToString("N0", hu)} darab,  {szazalek.ToString("F2", hu)}%");
         }
 
         public void kiiratasFajlba(StreamWriter ki, CultureInfo hu)
@@ -71,7 +71,8 @@ namespace MCS_DNS_anal
             catch { konzolSzelesseg = 0; }
             if (konzolSzelesseg <= 0) konzolSzelesseg = 120;
 
-            int maxOszlopSzelesseg = Math.Max(10, konzolSzelesseg - cimkeSzelesseg - 3);
+            // a tabulátor kb. 8 karakternyi helyet foglal, ezt is figyelembe vesszük
+            int maxOszlopSzelesseg = Math.Max(10, konzolSzelesseg - cimkeSzelesseg - 2 - 8);
 
             long maxDb = 0;
             foreach (Bazis b in blista)
@@ -83,13 +84,13 @@ namespace MCS_DNS_anal
                     ? (int)Math.Round((double)b.darabszam / maxDb * maxOszlopSzelesseg)
                     : 0;
 
-                Console.WriteLine($"{b.nev.PadRight(cimkeSzelesseg)}: {new string('*', csillagszam)}");
+                // nincs kettőspont, csak a névhez igazított szóközök
+                Console.WriteLine($"\t{b.nev.PadRight(cimkeSzelesseg + 2)}{new string('*', csillagszam)}");
             }
         }
 
         static void Main(string[] args)
         {
-            #region fejlec
             /*
             MCS - DNS analízis
             MCS - 2025.xx.xx.
@@ -98,11 +99,9 @@ namespace MCS_DNS_anal
             Console.WriteLine(fejlec);
             for (int i = 0; i < fejlec.Length; i++) Console.Write('-');
             Console.WriteLine();
-            #endregion
 
             CultureInfo hu = CultureInfo.GetCultureInfo("hu-HU");
 
-            #region bazisok_letrehozasa
             List<Bazis> bazisok = new List<Bazis>
             {
                 new Bazis("adenin",  'A'),
@@ -110,16 +109,18 @@ namespace MCS_DNS_anal
                 new Bazis("citozin", 'C'),
                 new Bazis("timin",   'T')
             };
-            #endregion
 
-            #region fajlbeolvasas
+            int nevSzelesseg = 0;
+            foreach (Bazis b in bazisok)
+                nevSzelesseg = Math.Max(nevSzelesseg, b.nev.Length + 2);
+
             // Nem tároljuk egyidejűleg a teljes állományt a memóriában,
             // csak az éppen beolvasott sort dolgozzuk fel, majd eldobjuk.
             string sor;
             string fejlecSor;
             long teljesMeret = 0;
 
-            StreamReader be = new StreamReader("dna.txt");
+            StreamReader be = new StreamReader("DNA.txt");
 
             fejlecSor = be.ReadLine();   // az első sor NEM adat
 
@@ -146,40 +147,34 @@ namespace MCS_DNS_anal
 
             foreach (Bazis b in bazisok)
                 b.SzazalekSzamol(teljesMeret);
-            #endregion
 
-            #region feladat1_teljesmeret
+            // ===================== 1. feladat =====================
             Console.WriteLine("\n1.feladat:");
-            Console.WriteLine($"A teljes méret: {teljesMeret.ToString("N0", hu)}");
-            #endregion
+            Console.WriteLine($"\tA teljes méret: {teljesMeret.ToString("N0", hu)}");
 
-            #region feladat2_bazisstatisztika
-            Console.WriteLine("\n2.feladat:");
+            // ===================== 2. feladat =====================
+            Console.WriteLine("2.feladat:");
             foreach (Bazis b in bazisok)
-                b.kiiratas(hu);
-            #endregion
+                b.kiiratas(hu, nevSzelesseg);
 
-            #region feladat3_szignifikanciavizsgalat
-            Console.WriteLine("\n3.feladat:");
+            // ===================== 3. feladat =====================
+            Console.WriteLine("3.feladat:");
 
             double atlag = teljesMeret / 4.0;
             List<string> eltresek = szignifikansEltresek(bazisok, atlag);
 
             if (eltresek.Count == 0)
-                Console.WriteLine("Nincs jelentős eltérés a darabszámokban.");
+                Console.WriteLine("\tNincs jelentős eltérés a darabszámokban.");
             else
                 foreach (string uzenet in eltresek)
-                    Console.WriteLine(uzenet);
-            #endregion
+                    Console.WriteLine($"\t{uzenet}");
 
-            #region feladat4_oszlopdiagram
-            Console.WriteLine("\n4.feladat:");
+            // ===================== 4. feladat =====================
+            Console.WriteLine("4.feladat:");
             oszlopDiagramKiir(bazisok);
-            #endregion
 
-            #region feladat5_fajlkiiras
-            Console.WriteLine("\n5.feladat:");
-            Console.Write("file-kiírás ... ");
+            // ===================== 5. feladat =====================
+            Console.Write("5.feladat: file-kiírás ... ");
 
             StreamWriter ki = new StreamWriter("DNA-result.txt", false, Encoding.UTF8);
 
@@ -196,11 +191,10 @@ namespace MCS_DNS_anal
             string ellSor = ellenorzo.ReadLine();
             while (ellSor != null)
             {
-                Console.WriteLine(ellSor);
+                Console.WriteLine($"\t{ellSor}");
                 ellSor = ellenorzo.ReadLine();
             }
             ellenorzo.Close();
-            #endregion
 
             Console.ReadLine();
         }

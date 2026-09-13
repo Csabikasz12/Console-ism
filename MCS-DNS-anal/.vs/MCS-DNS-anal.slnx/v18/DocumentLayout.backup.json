@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\meszaroscsaba\\Documents\\GitHub\\Console ism\\MCS-DNS-anal\\",
+  "WorkspaceRootPath": "C:\\Users\\jrmes\\Documents\\GitHub\\Console-ism\\MCS-DNS-anal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50C06A1D-9145-4224-A643-90D460F45F72}|MCS-DNS-anal\\MCS-DNS-anal.csproj|c:\\users\\meszaroscsaba\\documents\\github\\console ism\\mcs-dns-anal\\mcs-dns-anal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50C06A1D-9145-4224-A643-90D460F45F72}|MCS-DNS-anal\\MCS-DNS-anal.csproj|solutionrelative:mcs-dns-anal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jrmes\\Documents\\GitHub\\Console-ism\\MCS-DNS-anal\\MCS-DNS-anal\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MCS-DNS-anal\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\meszaroscsaba\\Documents\\GitHub\\Console ism\\MCS-DNS-anal\\MCS-DNS-anal\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\jrmes\\Documents\\GitHub\\Console-ism\\MCS-DNS-anal\\MCS-DNS-anal\\Program.cs",
               "RelativeDocumentMoniker": "MCS-DNS-anal\\Program.cs",
-              "ToolTip": "C:\\Users\\meszaroscsaba\\Documents\\GitHub\\Console ism\\MCS-DNS-anal\\MCS-DNS-anal\\Program.cs",
+              "ToolTip": "C:\\Users\\jrmes\\Documents\\GitHub\\Console-ism\\MCS-DNS-anal\\MCS-DNS-anal\\Program.cs",
               "RelativeToolTip": "MCS-DNS-anal\\Program.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAwHkAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAAAMMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-08T12:47:57.818Z",
               "EditorCaption": ""
